@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :users do
+    delete "/users/sign_out" => "devise/sessions#new"
+  end
+
+  root "users#index"
+
+  resources :users, only: [:index]
+
+  resources :favours, only: [:new, :create, :show, :index]
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

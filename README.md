@@ -36,12 +36,14 @@
 			1.Post a Favour Title
 			2.Limited description
 			3.Location
+
 			4.Price
 
 	### Choose to do a Favour
 
 			1. Accpect Favour
-			2. Discuss Terms of Favour
+
+			2. Discuss Terms of Favour - VIA email
 			3. Finalize Value (Free or Cash)
 			4. Commit to Favour 
 			5. Payment done once favour completed. (hugs or Cash)
@@ -50,6 +52,9 @@
 	### Favour FEED.
 
 			1. Updated favour feed of people asking favours
+			2. Posteed - Green
+			3. Accpected - Orange
+			4. Completeed - Red
 
 	### Favour Inbox
 

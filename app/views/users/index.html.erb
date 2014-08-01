@@ -1,0 +1,7 @@
+<h1>Mates to Do Favours</h1>
+
+<% @users.each do |user| %>
+	<%= user.email %>
+<% end %>
+
+<%= link_to "New Favour", new_favour_path %>
