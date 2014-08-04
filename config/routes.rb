@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    delete "/users/sign_out" => "devise/sessions#new"
-  end
+  # devise_for :users do
+  #   delete "/users/sign_out" => "devise/sessions#new"
+  # end
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   root "users#index"
 
