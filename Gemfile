@@ -42,3 +42,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'bootstrap-sass', '~> 3.2.0'

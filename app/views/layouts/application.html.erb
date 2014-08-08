@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Favours</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-
-  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href="style.css" rel="stylesheet">
+  <head>
+    <title>Favours</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    
   </head>
   <body>
     <div class="container">
-      <form>
-        <div class="form-group">
-          <textarea class="form-control status-box" rows="2" placeholder="Do me a Favour?"></textarea>
-        </div>
-      </form>
-      <div class="button-group pull-right">
-        <p class="counter">140</p>
-        <a href="#" class="btn btn-primary">Post</a>
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Favours</h3>
       </div>
-    
-      <ul class="posts">
-      </ul>
     </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-    
-</head>
-<body>
-<% if flash[:notice] %>
-	<%= flash[:notice] %>
-<% end %>
-<% if flash[:alert] %>
-	<%= flash[:alert] %>
-<% end %>
-<%= yield %>
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% if user_signed_in? %>
-Signed in as <%= current_user.email %>. Not you?
-<%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
-<% else %>
-<%= link_to "Sign up", new_user_registration_path %> or
-<%= link_to "Sign in", new_user_session_path %>
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-<% end %>
-
-</body>
+    <div class="container">
+      <% if flash[:notice] %>
+      <%= flash[:notice] %>
+      <% end %>
+      <% if flash[:alert] %>
+      <%= flash[:alert] %>
+      <% end %>
+      <%= yield %>
+      <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>. Not you?
+      <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+      <% else %>
+      <%= link_to "Sign up", new_user_registration_path %> or
+      <%= link_to "Sign in", new_user_session_path %>
+      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+      <% end %>
+    </div>
+  </body>
 </html>

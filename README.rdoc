@@ -1,7 +1,7 @@
 == README
 
 * # Favours app
-  #### By Lance Connolly July 22, 2014
+  #### By Lance Connolly and Andrea Thomas July 22, 2014
 
   ## Description
 

@@ -1,53 +1,106 @@
 @charset "UTF-8";
-/* CSS Document */
 
+/* universal */
 
-.nav a {
-  color: #5a5a5a;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 14px 10px;
-  text-transform: uppercase;
+html {
+  overflow-y: scroll;
 }
 
-.nav li {
-  display: inline;
+section {
+  overflow: auto;
 }
 
-.jumbotron {
-  background-image:url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png');
-  height: 500px;
+textarea {
+  resize: vertical;
 }
 
-.jumbotron .container {
-  position: relative;
-  top:100px;
+.header {
+  /*margin: 0 auto;
+  width: 50%;*/
+  margin-bottom: 50px;
+}
+.center {
+  text-align: center;
 }
 
-.jumbotron h1 {
-  color: #fffff;
-  font-size: 48px;  
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
+.center h1 {
+  margin-bottom: 10px;
+
+}
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
 }
 
-.jumbotron p {
-  font-size: 20px;
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
   color: #fff;
-}
-
-.learn-more {
-  background-color: #f7f7f7;
-}
-
-.learn-more h3 {
-  font-family: 'Shift', sans-serif;
-  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
   font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
-.learn-more a {
-  color: #00b0ff;
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
 }
 
 
