@@ -3,22 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>Favours</title>
-<link href="favours.css" rel="stylesheet" type="text/css">
+<%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+
 <link href="bootstrap.css" rel="stylesheet" type="text/css">
 
-<div class="nav">
-      <div class="container">
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+    	<div class="container">
+        	<a href ="#" class="brand"> favours</a>
+       		<ul class="nav">
+            <li> <%= link_to "home", home_path %>
+      </div>
+  </div>
+      	<div class="container">
+      		<%= yield %>
+      	</div>
+      
        <ul class="pull-left">
        <div class="header"> 
        <img src="../../../../../../Desktop/Screen Shot 2014-08-06 at 6.20.52 PM.png" width="76" height="75" alt=""/>
 <li><a href="#">About Us</a></li>
-        </ul>
+  </ul>
         <ul class="pull-right">
           <li><a href="signup.html">Sign Up</a></li>
           <li><a href="login.html">Log In</a></li>
           <li><a href="help.html">Help</a></li>
         </ul>
-  </div>
+</div>
 </div><center>
     <div class="jumbotron">
       <div class="container">
