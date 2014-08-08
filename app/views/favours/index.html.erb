@@ -16,6 +16,7 @@
         <td><%= favour.title %></td>
         <td><%= favour.description %></td>
         <td><%= favour.location %></td>
+        <td><%= link_to "accept", new_favour_acceptance_path(favour) %></td>
       </tr>
     <% end %>
   </tbody>

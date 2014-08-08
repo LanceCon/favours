@@ -10,7 +10,7 @@ class FavoursController < ApplicationController
 	end
 
 	def create
-		@favour = Favour.new(favour_attributes)
+		@favour = Favour.new(favour_attributes.merge({user_id: current_user.id}))
 
 		if @favour.save 
 			redirect_to favours_path

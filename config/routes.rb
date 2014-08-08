@@ -11,6 +11,14 @@ Rails.application.routes.draw do
 
   resources :favours, only: [:new, :create, :show, :index]
 
+  resources :favours do 
+    resources :acceptances, only: [:new, :create]
+  end
+
+
+
+  # , only: [:create, :new]
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
